@@ -1,6 +1,10 @@
 """
 Django settings for Project_Practice project.
 
+
+test
+
+
 Based on by 'django-admin startproject' using Django 2.1.2.
 
 For more information on this file, see
@@ -37,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'MyApp1',
 ]
 
 # Middleware framework

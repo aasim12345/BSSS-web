@@ -1,4 +1,10 @@
+from django.urls import include, re_path
+import MyApp1.views
+
+
 """
+
+
 Project_Practice URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -6,7 +12,7 @@ The `urlpatterns` list routes URLs to views. For more information please see:
 
 Examples:
 Function views
-    1. Add an import:  from my_app import views
+    1. Add an import:  from my_app1 import views
     2. Add a URL to urlpatterns:  path('', views.home, name='home')
 Class-based views
     1. Add an import:  from other_app.views import Home
@@ -23,4 +29,6 @@ Including another URLconf
 urlpatterns = [
     # Uncomment the next line to enable the admin:
     #path('admin/', admin.site.urls)
+    re_path(r'^$', MyApp1.views.index, name='index'),
+    re_path(r'^home$', MyApp1.views.index, name='home'),
 ]

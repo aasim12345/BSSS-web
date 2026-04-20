@@ -1,9 +1,41 @@
 <html>
-<head><title>{{ title }}</title></head>
+<head><title>Teacher</title></head>
 
 <body>
 
-<strong>{{ message }}</strong>{{ content }}
+    <strong>Teachers</strong>
 
+    {% if content %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Teaching Area</th>
+        </tr>
+        {% for teach in content %}
+        <tr>
+            <td>{{teach.Name}}</td>
+            <td>{{teach.Area}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Topic</th>
+        </tr>
+        {% for assign in content2 %}
+        <tr>
+            <td>{{assign.Name}}</td>
+            <td>{{assign.Topic}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    {% else %}
+    <strong>No data!!</strong>
+    {% endif %}
+    <p><a href="{% url 'input' %}">Input new Teachers</a></p>
+    <p><a href="{% url 'assign' %}">Input new Assessment</a></p>
 </body>
 </html>

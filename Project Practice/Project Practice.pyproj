@@ -52,6 +52,7 @@
     <Content Include="MyApp1\templates\MyApp1\index.html" />
     <Content Include="MyApp1\templates\MyApp1\input.html" />
     <Content Include="MyApp1\templates\MyApp1\assign.html" />
+    <Content Include="MyApp1\templates\MyApp1\home.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>

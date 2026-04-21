@@ -60,3 +60,5 @@ def assign_view(request):
 
 
     return render(request, "MyApp1/assign.html", {"form": form})
+def home(request):
+ return render(request,"MyApp1/home.html")

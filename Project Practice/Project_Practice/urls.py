@@ -31,11 +31,11 @@ Including another URLconf
 urlpatterns = [
     # Uncomment the next line to enable the admin:
     path('admin/', admin.site.urls),
-    re_path(r'^$', MyApp1.views.home, name='index'),
-    re_path(r'^home$', MyApp1.views.home, name='home'),
-    re_path(r'input', MyApp1.views.input_view, name='input'),
+    re_path(r'^$', MyApp1.views.home, name='home'),
+    re_path(r'^home$', MyApp1.views.index, name='index'),
+    path(r'input', MyApp1.views.input_view, name='input'),
     re_path(r'assign', MyApp1.views.assign_view, name='assign'),
-    path("",MyApp1.views.home, name="home"),
+    #path("",MyApp1.views.home, name="home"),
     path("teachers/", MyApp1.views.teacher, name="teacher")
 ]
 admin.site.site_header = "BSSS administration"

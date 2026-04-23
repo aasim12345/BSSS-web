@@ -1,12 +1,17 @@
 <html>
-<head><title>Teacher</title></head>
+<head><title>Teacher</title>
+
+       {% load static %}
+       <link href="{% static 'Style.css' %}" rel="stylesheet" />
+
+</head>
 
 <body>
 
     <strong>Teachers</strong>
 
     {% if content %}
-    p><a href="{% url 'home' %}">Back to Home</a>
+    <a href="{% url 'home' %}">Back to Home</a>
     <table>
         <tr>
             <th>Name</th>
@@ -15,11 +20,13 @@
         {% for teach in content %}
         <tr>
             <td>{{teach.Name}}</td>
+
             <td>{{teach.Area}}</td>
         </tr>
         {% endfor %}
 
     </table>
+    <p><a href="{% url 'input' %}">Input new Teachers</a></p>
     <table>
         <tr>
             <th>Subject</th>
@@ -28,6 +35,8 @@
         {% for assign in content2 %}
         <tr>
             <td>{{assign.Name}}</td>
+
+
             <td>{{assign.Topic}}</td>
         </tr>
         {% endfor %}
@@ -36,7 +45,6 @@
     {% else %}
     <strong>No data!!</strong>
     {% endif %}
-    <p><a href="{% url 'input' %}">Input new Teachers</a></p>
     <p><a href="{% url 'assign' %}">Input new Assessment</a></p>
 </body>
 </html>

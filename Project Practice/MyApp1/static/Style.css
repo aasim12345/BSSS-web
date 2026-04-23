@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
+
+
+* {
+
+
+
+    font-family: "Unica One", sans-serif;
+ }
+a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: red;
+}
+
+a:hover{
+    color: lightblue;
+    text-decoration: underline;
+}
+
+th{
+    padding : 12px;
+}
+
+td{
+    padding : 9px;
+}

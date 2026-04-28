@@ -4,9 +4,6 @@
 
 
 * {
-
-
-
     font-family: "Unica One", sans-serif;
  }
 a{
@@ -26,4 +23,17 @@ th{
 
 td{
     padding : 9px;
+}
+
+.header-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+}
+.home-link{
+    float: right;
+}
+.h1-text {
+    text-align: left; 
 }

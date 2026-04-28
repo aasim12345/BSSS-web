@@ -1,17 +1,19 @@
 <html>
-<head><title>Teacher</title>
+<head>
+    <title>Teacher</title>
 
-       {% load static %}
-       <link href="{% static 'Style.css' %}" rel="stylesheet" />
+    {% load static %}
+    <link href="{% static 'Style.css' %}" rel="stylesheet" />
 
 </head>
-
+<a href="{% url 'home' %}" style="border: 2px solid black; padding: 5px 10px; text-decoration: none" class="home-link">Home</a>
 <body>
 
-    <strong>Teachers</strong>
+    <div class="header-container">
+        <h1>Teachers</h1>
+    </div>
 
     {% if content %}
-    <a href="{% url 'home' %}">Back to Home</a>
     <table>
         <tr>
             <th>Name</th>

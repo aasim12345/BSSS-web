@@ -29,11 +29,21 @@ td{
      display: flex;
      justify-content: space-between;
      align-items: center;
-
 }
 .home-link{
     float: right;
 }
 .h1-text {
     text-align: left; 
+}
+
+
+.home-login {
+    border: 1px solid #cca3a3;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.H {
+    margin-bottom: 10px;
 }

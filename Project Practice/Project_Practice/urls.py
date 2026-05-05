@@ -1,5 +1,5 @@
 from django.urls import include, re_path
-import MyApp1.views
+import MyApp1.views 
 from django.contrib import admin
 from django.urls import path
 
@@ -33,10 +33,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$', MyApp1.views.home, name='home'),
     re_path(r'^home$', MyApp1.views.index, name='index'),
+    path(r'^home$', MyApp1.views.login, name='login'),
     path(r'input', MyApp1.views.input_view, name='input'),
     re_path(r'assign', MyApp1.views.assign_view, name='assign'),
     #path("",MyApp1.views.home, name="home"),
-    path("teachers/", MyApp1.views.teacher, name="teacher")
+    path("teachers/", MyApp1.views.login, name="teacher"),
+    path('report/', MyApp1.views.report, name='report')
 ]
 admin.site.site_header = "BSSS administration"
 

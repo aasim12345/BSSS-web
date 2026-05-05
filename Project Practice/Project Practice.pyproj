@@ -49,11 +49,13 @@
     <Compile Include="Project_Practice\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MyApp1\static\DS.pdf" />
     <Content Include="MyApp1\static\Style.css" />
     <Content Include="MyApp1\templates\MyApp1\index.html" />
     <Content Include="MyApp1\templates\MyApp1\input.html" />
     <Content Include="MyApp1\templates\MyApp1\assign.html" />
     <Content Include="MyApp1\templates\MyApp1\home.html" />
+    <Content Include="MyApp1\templates\MyApp1\login.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>

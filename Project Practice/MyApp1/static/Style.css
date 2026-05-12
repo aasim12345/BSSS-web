@@ -47,3 +47,8 @@ td{
 .H {
     margin-bottom: 10px;
 }
+.home-img {
+    justify-content: left;
+    display: flex;
+    
+}

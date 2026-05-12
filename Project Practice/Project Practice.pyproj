@@ -50,12 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MyApp1\static\DS.pdf" />
+    <Content Include="MyApp1\static\images\download.png" />
     <Content Include="MyApp1\static\Style.css" />
     <Content Include="MyApp1\templates\MyApp1\index.html" />
     <Content Include="MyApp1\templates\MyApp1\input.html" />
     <Content Include="MyApp1\templates\MyApp1\assign.html" />
     <Content Include="MyApp1\templates\MyApp1\home.html" />
     <Content Include="MyApp1\templates\MyApp1\login.html" />
+    <Content Include="MyApp1\templates\MyApp1\signup.html" />
+    <Content Include="MyApp1\templates\MyApp1\home2.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +67,7 @@
     <Folder Include="MyApp1\management\commands\" />
     <Folder Include="MyApp1\management\" />
     <Folder Include="MyApp1\static\" />
+    <Folder Include="MyApp1\static\images\" />
     <Folder Include="MyApp1\templates\" />
     <Folder Include="MyApp1\templates\MyApp1\" />
     <Folder Include="Project_Practice\" />

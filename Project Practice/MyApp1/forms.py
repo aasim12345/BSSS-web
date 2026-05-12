@@ -5,6 +5,8 @@ from .models import assessment
 
 
 
+
+
 class InputForm(forms.ModelForm):
 
     class Meta:
@@ -19,4 +21,3 @@ class InputForm2(forms.ModelForm):
         model = assessment
 
         fields = ['Name', 'Topic', 'teacher']
-

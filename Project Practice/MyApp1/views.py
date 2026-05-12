@@ -6,6 +6,13 @@ from .forms import InputForm
 from .models import assessment
 from .forms import InputForm2
 
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
+
 
 
 from pypdf import PdfWriter, PdfReader
@@ -70,8 +77,7 @@ def assign_view(request):
     return render(request, "MyApp1/assign.html", {"form": form})
 def home(request):
  return render(request,"MyApp1/home.html")
-def login(request) :
-    return render(request,"MyApp1/login.html")
+
 
 
 def report(request):
@@ -118,3 +124,16 @@ def generate_pdf():
 
     buffer.seek(0)
     return buffer
+
+def signup_view(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save() # Saves the new user with hashed password
+            return redirect('login')
+    else:
+        form = UserCreationForm()
+    return render(request, 'MyApp1/signup.html', {'form': form})
+
+def home2(request):
+    return render(request, 'MyApp1/home2.html')

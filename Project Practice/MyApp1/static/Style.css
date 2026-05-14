@@ -34,7 +34,9 @@ td{
     float: right;
 }
 .h1-text {
-    text-align: left; 
+    text-align: center;
+    font-family: "Unica One", sans-serif;
+    font-size: 9rem;
 }
 
 
@@ -51,4 +53,9 @@ td{
     justify-content: left;
     display: flex;
     
+}
+.low {
+    position: absolute;
+    bottom:0;
+    left:0;
 }

@@ -6,48 +6,51 @@
     <link href="{% static 'Style.css' %}" rel="stylesheet" />
 
 </head>
-<a href="{% url 'home' %}" style="border: 2px solid black; padding: 5px 10px; text-decoration: none" class="home-link">Home</a>
-<body>
+<a href="{% url 'home2' %}" style="margin-top:50px; border: 2px solid black; padding: 5px 10px; text-decoration: none" class="home-link">Home</a>
+<div style="text-align: right; border: 2px solid black; padding: 10px; background-color: #00FFFF; ">
+    <img src="{% static 'images/download.png' %}" alt="BSSS" class="home-img" />
+</div>
+    <body>
 
-    <div class="header-container">
-        <h1>Teachers</h1>
-    </div>
+        <div class="header-container">
+            <h1>Teachers</h1>
+        </div>
 
-    {% if content %}
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Teaching Area</th>
-        </tr>
-        {% for teach in content %}
-        <tr>
-            <td>{{teach.Name}}</td>
+        {% if content %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Teaching Area</th>
+            </tr>
+            {% for teach in content %}
+            <tr>
+                <td>{{teach.Name}}</td>
 
-            <td>{{teach.Area}}</td>
-        </tr>
-        {% endfor %}
+                <td>{{teach.Area}}</td>
+            </tr>
+            {% endfor %}
 
-    </table>
-    <p><a href="{% url 'input' %}">Input new Teachers</a></p>
-    <p><a href=" {% url 'report' %}">Download pdf</a></p>
-    <table>
-        <tr>
-            <th>Subject</th>
-            <th>Topic</th>
-        </tr>
-        {% for assign in content2 %}
-        <tr>
-            <td>{{assign.Name}}</td>
+        </table>
+        <p><a href="{% url 'input' %}"style="border: 2px solid black; padding: 5px 10px; text-decoration: none;">Input new Teachers</a></p>
+        <p><a href=" {% url 'report' %}"style="border: 2px solid black; padding: 5px 10px; text-decoration: none;">Download pdf</a></p>
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Topic</th>
+            </tr>
+            {% for assign in content2 %}
+            <tr>
+                <td>{{assign.Name}}</td>
 
 
-            <td>{{assign.Topic}}</td>
-        </tr>
-        {% endfor %}
+                <td>{{assign.Topic}}</td>
+            </tr>
+            {% endfor %}
 
-    </table>
-    {% else %}
-    <strong>No data!!</strong>
-    {% endif %}
-    <p><a href="{% url 'assign' %}">Input new Assessment</a></p>
-</body>
+        </table>
+        {% else %}
+        <strong>No data!!</strong>
+        {% endif %}
+        <p><a href="{% url 'assign' %}"style="border: 2px solid black; padding: 5px 10px; text-decoration: none;">Input new Assessment</a></p>
+    </body>
 </html>

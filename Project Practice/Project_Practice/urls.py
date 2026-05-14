@@ -42,6 +42,8 @@ urlpatterns = [
     path('signup/', MyApp1.views.signup_view, name='signup'),
      # Uses Django's built-in login logic
     path('login/', auth_views.LoginView.as_view(template_name='MyApp1/login.html'), name='login'),
+    path('home2/', MyApp1.views.home2,name='home2'),
+
 ]
     
 admin.site.site_header = "BSSS administration"

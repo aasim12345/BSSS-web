@@ -113,7 +113,7 @@ def generate_pdf():
     teachers = teacher.objects.all()
 
     for teach in teachers:
-        lines.append((teach.name, teach.area))
+        lines.append((teach.Name, teach.Area))
 
     table = Table(lines)
     table.wrapOn(p, 300, 300)
@@ -137,3 +137,6 @@ def signup_view(request):
 
 def home2(request):
     return render(request, 'MyApp1/home2.html')
+
+def unit_course(request):
+    return render(request, 'MyApp1/unit_course.html')

@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Unit Course</title>
+    <link href="{% static 'Style.css' %}" rel="stylesheet" />
+    <div style="text-align: right; border: 2px solid black; padding: 10px; background-color: #00FFFF; ">
+        <img src="{% static 'images/download.png' %}" alt="BSSS" class="home-img" />
+        <a href="{% url 'index' %}" style="border: 2px solid black; padding: 5px 10px; text-decoration: none;">Teachers</a>
+        <a href="{% url 'home2' %}" style="border: 2px solid black; padding: 5px 10px; text-decoration: none;">Home</a>
+        <a href="{% url 'unit_course' %}" style="border: 2px solid black; padding: 5px 10px; text-decoration: none;">Unit Courses</a>
+    </div>
+</head>
+<body>
+    <div style="max-width: 900px; margin: 40px auto; font-family: Arial;">
+
+        <h1 style="text-align:center;">Course Subjects</h1>
+
+        <!-- Search Bar -->
+        <input type="text"
+               id="searchInput"
+               placeholder="Search subject..."
+               onkeyup="searchSubjects()"
+               style="
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            font-size: 16px;
+        ">
+
+        <!-- Subject List -->
+        <div id="subjectList" style="margin-top:20px;">
+
+            <div class="subjectItem" onclick="showSubject('math')">
+                Math
+            </div>
+
+            <div class="subjectItem" onclick="showSubject('english')">
+                English
+            </div>
+
+            <div class="subjectItem" onclick="showSubject('science')">
+                Science
+            </div>
+
+            <div class="subjectItem" onclick="showSubject('history')">
+                History
+            </div>
+
+        </div>
+
+        <!-- Information Box -->
+        <div id="subjectInfo"
+             style="
+            margin-top: 30px;
+            padding: 20px;
+            background: #f3f4f6;
+            border-radius: 12px;
+         ">
+
+            <h2>Course Information</h2>
+            <p>Search and click a subject to view information.</p>
+
+        </div>
+
+    </div>
+
+    <style>
+        .subjectItem {
+            padding: 15px;
+            background: #2563eb;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+            .subjectItem:hover {
+                background: #1d4ed8;
+            }
+    </style>
+
+    <script>
+
+        function searchSubjects() {
+
+            let input = document.getElementById("searchInput").value.toLowerCase();
+
+            let subjects = document.getElementsByClassName("subjectItem");
+
+            for (let i = 0; i < subjects.length; i++) {
+
+                let text = subjects[i].innerText.toLowerCase();
+
+                if (text.includes(input)) {
+                    subjects[i].style.display = "";
+                } else {
+                    subjects[i].style.display = "none";
+                }
+            }
+        }
+
+        function showSubject(subject) {
+
+            let info = document.getElementById("subjectInfo");
+
+            if (subject === "math") {
+
+                info.innerHTML = `
+                <h2>Math</h2>
+
+                <p>
+                    This course teaches algebra, equations, graphs, and calculus.
+                </p>
+
+                <ul>
+                    <li>Algebra</li>
+                    <li>Functions</li>
+                    <li>Calculus</li>
+                </ul>
+            `;
+            }
+
+            else if (subject === "english") {
+
+                info.innerHTML = `
+                <h2>English</h2>
+
+                <p>
+                    This course focuses on writing, communication, and text analysis.
+                </p>
+
+                <ul>
+                    <li>Essay Writing</li>
+                    <li>Comparative Analysis</li>
+                    <li>Creative Writing</li>
+                </ul>
+            `;
+            }
+
+            else if (subject === "science") {
+
+                info.innerHTML = `
+                <h2>Science</h2>
+
+                <p>
+                    Learn chemistry, biology, and scientific experiments.
+                </p>
+
+                <ul>
+                    <li>Chemistry</li>
+                    <li>Biology</li>
+                    <li>Physics</li>
+                </ul>
+            `;
+            }
+
+            else if (subject === "history") {
+
+                info.innerHTML = `
+                <h2>History</h2>
+
+                <p>
+                    Study historical events, civilizations, and world history.
+                </p>
+
+                <ul>
+                    <li>Ancient Civilizations</li>
+                    <li>Wars</li>
+                    <li>Political History</li>
+                </ul>
+            `;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

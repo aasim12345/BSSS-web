@@ -43,6 +43,7 @@ urlpatterns = [
      # Uses Django's built-in login logic
     path('login/', auth_views.LoginView.as_view(template_name='MyApp1/login.html'), name='login'),
     path('home2/', MyApp1.views.home2,name='home2'),
+    path('unit_course/', MyApp1.views.unit_course, name='unit_course'),
 
 ]
     

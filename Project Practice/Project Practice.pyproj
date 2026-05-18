@@ -59,6 +59,7 @@
     <Content Include="MyApp1\templates\MyApp1\login.html" />
     <Content Include="MyApp1\templates\MyApp1\signup.html" />
     <Content Include="MyApp1\templates\MyApp1\home2.html" />
+    <Content Include="MyApp1\templates\MyApp1\unit_course.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>

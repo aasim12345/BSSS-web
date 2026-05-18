@@ -21,3 +21,4 @@ class InputForm2(forms.ModelForm):
         model = assessment
 
         fields = ['Name', 'Topic', 'teacher']
+
